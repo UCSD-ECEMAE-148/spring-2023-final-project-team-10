@@ -1,4 +1,7 @@
 # SP23 MAE/ECE 148 Team 10 Final Report: 
+
+<p align="center"><img src="img/logo.png" alt="Demo" /></p>
+
 Authors: <br _>
 Daniel Na <br _>
 David Lim <br _>
@@ -31,6 +34,6 @@ There are a couple things our projects could be improved in.
 Thank you to Jack Silberman, Kishore Nukala, Moises Lopez, and DepthAI for the assistance in producing this project.
 
 ### Credits
-Hand Tracker by geaxgx: https://github.com/geaxgx/depthai_hand_tracker.git <br _>
-Pedestrian Reidentification by luxonis: https://github.com/luxonis/depthai-experiments/tree/master/gen2-pedestrian-reidentification <br _>
-PyVESC by LiamBindle: https://github.com/LiamBindle/PyVESC.git<br _>
+[Hand Tracker by geaxgx](https://github.com/geaxgx/depthai_hand_tracker.git) <br _>
+[Pedestrian Reidentification by luxonis](https://github.com/luxonis/depthai-experiments/tree/master/gen2-pedestrian-reidentification) <br _>
+[PyVESC by LiamBindle](https://github.com/LiamBindle/PyVESC.git) <br _>

@@ -31,6 +31,6 @@ There are a couple things our projects could be improved in.
 Thank you to Jack Silberman, Kishore Nukala, Moises Lopez, and DepthAI for the assistance in producing this project.
 
 ### Credits
-Hand Tracker by geaxgx: https://github.com/geaxgx/depthai_hand_tracker.git
-Pedestrian Reidentification by luxonis: https://github.com/luxonis/depthai-experiments/tree/master/gen2-pedestrian-reidentification
-PyVESC by LiamBindle: https://github.com/LiamBindle/PyVESC.git
+Hand Tracker by geaxgx: https://github.com/geaxgx/depthai_hand_tracker.git <br _>
+Pedestrian Reidentification by luxonis: https://github.com/luxonis/depthai-experiments/tree/master/gen2-pedestrian-reidentification <br _>
+PyVESC by LiamBindle: https://github.com/LiamBindle/PyVESC.git<br _>

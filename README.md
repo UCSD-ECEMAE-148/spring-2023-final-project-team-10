@@ -1,6 +1,6 @@
 # SP23 MAE/ECE 148 Team 10 Final Report: 
 
-<p align="center"><img src="img/logo.png" alt="Demo" /></p>
+<p align="center"><img src="img/logo.png" /></p>
 
 Authors: <br _>
 Daniel Na <br _>
@@ -16,9 +16,23 @@ _A follower robot which identifies a single individual to follow using gesture b
 2. Human identification was implemented using the DepthAI demo's implementation of the pedestrian reidentification algorithm.
 3. Lidar data was collected using Python and then utilizing the data in order to generate control outputs using PyVesc.
 
+<p align="center"><img src="img/diagram.png" /></p>
+<p align="center"><img src="img/nodes.png" /></p>
+
 ### System summary:
 Our code first runs gesture recognition when the program is launched. It will keep searching for a known gesture to be displayed and once the correct gestures are displayed in the correct sequence, the program will terminate the gesture recognition algorithm and launch the human identification algorithm. The human identification algorithm provides outputs for ID an their corresponding coordinates of the bounding box using the top right and bottom left corners by pixels. We isolate the single individual to track by selecting the first human ID to be recognized 8 times. Once this has occurred, the bounding box width and direction to point is calculated using the corner coordinates. The data is then sent to the Lidar by converting the pixel based data into a range of angles to collect the data from. Note that while the Lidar will keep collecting data 360 degrees, we are simply isolating the data at a certain angle range. Once the range and direction has been set, the robot utilizes PyVesc functions in order to achieve a set distance with the nearest object in the scanning angle range. In our case, this was set to 1 meter. 
 **PyVesc implementation and PID:**
+
+
+
+
+https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-10/assets/136998711/44719f1f-e9b7-465e-943d-62163c0b9901
+
+
+
+
+Uploading IMG_6046.mov…
+
 
 
 ### Issues/Bugs:
@@ -37,3 +51,5 @@ Thank you to Jack Silberman, Kishore Nukala, Moises Lopez, and DepthAI for the a
 [Hand Tracker by geaxgx](https://github.com/geaxgx/depthai_hand_tracker.git) <br _>
 [Pedestrian Reidentification by luxonis](https://github.com/luxonis/depthai-experiments/tree/master/gen2-pedestrian-reidentification) <br _>
 [PyVESC by LiamBindle](https://github.com/LiamBindle/PyVESC.git) <br _>
+
+<p align="left"><img src="img/jsoe.png" height=400/><img src="img/ucsd.png" height=100/></p>

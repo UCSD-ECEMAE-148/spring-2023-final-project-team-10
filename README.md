@@ -21,8 +21,8 @@ _A follower robot which identifies a single individual to follow using gesture b
 
 ### System summary:
 Our code first runs gesture recognition when the program is launched. It will keep searching for a known gesture to be displayed and once the correct gestures are displayed in the correct sequence, the program will terminate the gesture recognition algorithm and launch the human identification algorithm. The human identification algorithm provides outputs for ID an their corresponding coordinates of the bounding box using the top right and bottom left corners by pixels. We isolate the single individual to track by selecting the first human ID to be recognized 8 times. Once this has occurred, the bounding box width and direction to point is calculated using the corner coordinates. The data is then sent to the Lidar by converting the pixel based data into a range of angles to collect the data from. Note that while the Lidar will keep collecting data 360 degrees, we are simply isolating the data at a certain angle range. Once the range and direction has been set, the robot utilizes PyVesc functions in order to achieve a set distance with the nearest object in the scanning angle range. In our case, this was set to 1 meter. 
-**PyVesc implementation and PID:**
 
+**PyVesc implementation and PID:**
 
 
 
@@ -31,7 +31,8 @@ https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-10/assets/1369
 
 
 
-Uploading IMG_6046.mov…
+https://github.com/UCSD-ECEMAE-148/spring-2023-final-project-team-10/assets/136998711/e4fe2759-0748-419b-92d2-d59592767552
+
 
 
 

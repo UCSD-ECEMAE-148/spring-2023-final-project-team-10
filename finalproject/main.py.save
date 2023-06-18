@@ -1,0 +1,93 @@
+import sys
+import os
+import multiprocessing as mp
+sys.path.append('/home/jetson/projects/depthai_hand_tracker')
+from HandController import HandController
+from pedestrian import cam_process
+
+#password = 0
+one = 0
+two = 0
+# Define the callbacks
+def go_callback(event):
+    print("Password: *")
+    global one
+    one += 1
+    print(one)
+
+def stop_callback(event):
+    global one,two
+    if(one == 1):
+        print("Password: **")
+        print("Unlocked Successful")
+        two += 1
+        print(one,two)
+        hc.stop()
+
+        print('Starting main process.')
+        main()
+
+    else:
+        one = 0
+
+
+def main():
+    try:
+        mp.set_start_method('spawn')
+        cam_q = mp.Queue()
+        id_count = {}
+        real_id = None
+        while True:
+            while not cam_q.empty():
+                id_data = (cam_q.get())
+            id_list = list(id_data.keys)
+            print(id_list)
+
+            for ID in id_list:
+                if ID in id_count:
+                    id_count[ID] += 1
+                else:
+                    id_count[ID] = 1
+
+                if id_count[ID] > 20 and not real_id:
+                    real_id = ID
+                    
+                if(ID == real_id):
+                    print(id_data[ID])        cam_p = mp.Process(target = cam_process, args = (cam_q,))
+        cam_p.start()
+        print("Starter human detection.")
+        while True:
+            while not cam_q.empty():
+                print(cam_q.get())
+    except KeyboardInterrupt:
+        print('Stopped main process.')
+
+
+
+# Define the config
+config = {
+    'pose_actions' : [
+        {'name': 'GO', 'pose':'FIVE', 'hand':'any', 'callback': 'go_callback'},
+        {'name': 'STOP', 'pose':'TWO', 'hand':'any', 'callback': 'stop_callback'},
+    ],
+    'renderer': 
+    {   
+        'enable': False,
+
+        'args':
+        {
+            'output': None,
+        }
+
+    }
+}
+
+
+
+if __name__ == '__main__':
+    # Create a HandController instance
+    hc = HandController(config)
+
+    # Start the loop
+    print("Calling the loop function")
+    hc.loop()

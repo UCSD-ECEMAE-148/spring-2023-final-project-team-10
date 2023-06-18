@@ -1,8 +1,8 @@
 # SP23 MAE/ECE 148 Team 10 Final Report: 
-Authors:
-Daniel Na
-David Lim
-Samuel Kweon
+Authors: <br _>
+Daniel Na <br _>
+David Lim <br _>
+Samuel Kweon <br _>
 
 ### Project outline:
 _A follower robot which identifies a single individual to follow using gesture based password._

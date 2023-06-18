@@ -29,3 +29,8 @@ There are a couple things our projects could be improved in.
 2. Secondly, a potential topic of improvement is implementing a protocol to find the target again after the human being tracked has left the camera's field of view. Currently the robot remains stationary if nobody is detected, but if someone was previously detected, it would be useful to have the robot continue turning in the directing the target left the frame until the target is found again. 
 
 Thank you to Jack Silberman, Kishore Nukala, Moises Lopez, and DepthAI for the assistance in producing this project.
+
+### Credits
+Hand Tracker by geaxgx: https://github.com/geaxgx/depthai_hand_tracker.git
+Pedestrian Reidentification by luxonis: https://github.com/luxonis/depthai-experiments/tree/master/gen2-pedestrian-reidentification
+PyVESC by LiamBindle: https://github.com/LiamBindle/PyVESC.git

@@ -52,4 +52,5 @@ Thank you to Jack Silberman, Kishore Nukala, Moises Lopez, and DepthAI for the a
 [Pedestrian Reidentification by luxonis](https://github.com/luxonis/depthai-experiments/tree/master/gen2-pedestrian-reidentification) <br _>
 [PyVESC by LiamBindle](https://github.com/LiamBindle/PyVESC.git) <br _>
 
-<p align="left"><img src="img/jsoe.png" height=400/><img src="img/ucsd.png" height=100/></p>
+
+<p align="left"><img src="img/jsoe.png" height=100/><img src="img/ucsd.png" height=100/></p>
